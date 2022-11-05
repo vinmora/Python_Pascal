@@ -19,4 +19,4 @@ for a in range(0,n,1):
     for c in range(n,a,-1):
         print(c,end="")
     print()
-print("ini mengetest perubahan git")
+    
