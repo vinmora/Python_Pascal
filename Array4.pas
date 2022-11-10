@@ -2,14 +2,15 @@ program array4;
 uses crt;
 
 type
-Array_1 = array[1..5,1..4] of integer;
+Array_1 = array[1..5,1..4] of real;
 
 var
-i,j,k,n,Avg : integer;
+i,j,k,n : integer;
 Table : Array_1;
-Mean : real;
+Mean,Avg: real;
 
 begin
+clrscr;
 
 write('Masukkan jumlah siswa: ');readln(n);
 writeln;
@@ -60,6 +61,7 @@ for i :=  1 to n do
 
         Avg := 0;
     end;
-
+writeln;
+readln;
 
 end.
