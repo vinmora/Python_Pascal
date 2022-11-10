@@ -9,8 +9,6 @@ i,j,x1,x2,y1,y2 : integer;
 
 begin
 clrscr;
-writeln;
-writeln;
 
 writeln('Silahkan masukkan jumlah kolom dan baris matriks anda! (maksimal 5)');
 writeln;
@@ -32,7 +30,7 @@ clrscr;
                  end;
             end;
 
-    writeln;
+        writeln;
 
         for i := 1 to x1 do
             begin
