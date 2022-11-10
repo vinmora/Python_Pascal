@@ -5,14 +5,14 @@ type
 M = array[1..5,1..5] of integer;
 var
 m1,m2,m3: M;
-x,y,i,j,x1,x2,y1,y2,a,b : integer;
+i,j,x1,x2,y1,y2 : integer;
 
 begin
 clrscr;
 writeln;
 writeln;
 
-writeln('Silahkan masukkan jumlah kolom dan baris matriks anda');
+writeln('Silahkan masukkan jumlah kolom dan baris matriks anda! (maksimal 5)');
 writeln;
 write('Masukkan jumlah baris matriks ke-1: ');readln(x1);
 write('Masukkan jumlah kolom matriks ke-1: ');readln(y1);
@@ -34,30 +34,34 @@ clrscr;
 
     writeln;
 
-        for a := 1 to x2 do
+        for i := 1 to x1 do
             begin
-                for b := 1 to y2 do
+                for j := 1 to y1 do
                  begin 
-                    write('Masukkan elemen Matriks 2 [',a,',',b,']: ');readln(m2[a,b]);
+                    write('Masukkan elemen Matriks 2 [',i,',',j,']: ');readln(m2[i,j]);
                  end;
             end;
 
 
-        for x:= 1 to x1 do
+        for i:= 1 to x1 do
             begin  
-                for y:= 1 to y1 do
+                for j:= 1 to y1 do
                  begin 
-                    m3[x,y] := m1[i,j] + m2[a,b];
+                    m3[i,j] := m1[i,j] + m2[i,j];
                  end;
             end;
+
+        writeln;
 
         writeln('Hasil penjumlahan matriks: ');
-        for x:= 1 to x1 do
+        writeln;
+        for i:= 1 to x1 do
             begin   
-                for y:= 1 to y2 do 
+                for j:= 1 to y2 do 
                  begin
-                    write(m3[x,y]:4,' ');
+                    write(m3[i,j]:4,' ');
                  end;
+                 writeln;
             end;
 
         writeln;
