@@ -16,6 +16,7 @@ if (n == o ) & (m == p) & (m <= 5) & (n <= 5):
     
     matrix1 = []
     matrix2 = []
+    matrixsum = []
     print()
     print("masukkan inputan!")
     print()
@@ -52,6 +53,14 @@ if (n == o ) & (m == p) & (m <= 5) & (n <= 5):
         for j in range (m):
             print(matrix2[i][j],end =" ")
             print()
+    
+    for i in range (n):
+        lst3 = []
+        for j in range (m):
+            lst3[i,j]= matrix1[i][j] + matrix2[i][j]
+
+
+            print(matrixsum[i][j],end =" ")
 else:
     os.system("cls")
     print("Matriks  tidak dapat di jumlahkan")
