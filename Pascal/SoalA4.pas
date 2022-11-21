@@ -9,24 +9,25 @@ begin
 
   writeln;
    
-  write('Input satu angka bulat: ');
+  write('Input bilangan bulat: ');
   readln(n);
  
   Prime := true;
  
-  if ((n = 0) or (n = 1)) then
+  if (n < 2) then
     Prime := false
+    
   else
     begin
-    for i := 2 to n-1 do
-      begin
-      if ((n mod i) = 0){ and (n <> i)} then
+      for i := 2 to (n div 2) do
         begin
-          Prime := false;
-          break;
-        end;
+          if ((n mod i) = 0) then
+            begin
+              Prime := false;
+              break;
+            end;
+          end;
       end;
-    end;
  
   writeln;
  
