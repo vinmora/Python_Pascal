@@ -32,7 +32,7 @@ procedure mean(n: integer);
 var n : integer;
 begin
     clrscr;
-    write('Masukkan angka: ');readln(n);
+    write('Masukkan banyak data: ');readln(n);
     writeln;
 
     mean(n);
