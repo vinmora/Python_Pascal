@@ -15,9 +15,9 @@ writeln();
 
 if (n > 1) then 
     begin 
-        for i := 2 to (n div 2) do
+        for i := 2 to (((n div 2) + 2) div 2) do
             begin
-                for j := 2 to i do
+                for j := (((n div 2) + 2) div 2) downto i do
                     begin
                         if (i * j = n) then
                           begin
