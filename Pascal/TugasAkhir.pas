@@ -7,6 +7,8 @@ function ganjil(jenis :integer):string;
         ganjil := 'ganjil'
         else if jenis mod 2 = 0 then
         ganjil := 'genap';
+
+        write(ganjil);
     end; 
 
 procedure prima(jenis : integer);
@@ -52,6 +54,9 @@ var
     nilai1,nilai2,hsltambah,hslkali,hslkurang : integer;
    hslbagi : real;
    mx,n : integer;
+
+
+   j1 : char;
 z : real;
 L : Array_1;
 data1: data;
@@ -93,6 +98,10 @@ clrscr;
 
 clrscr;
 
+
+repeat
+    
+
 if prgm = 1 then
    begin
     writeln('Anda memilih program jenis bilangan');
@@ -105,6 +114,8 @@ if prgm = 1 then
     writeln;
     writeln('<Tekan ENTER untuk melanjutkan>');
     readln;
+
+    clrscr;
     end
 
 
@@ -266,4 +277,21 @@ else
         writeln('Nomor program yang anda masukkan tidak ada');
     end;
 
+
+
+writeln('Apakah anda ingin kembali menggunakan program? (Y/n)');
+write('>>');readln(j1);
+until (j1 <> 'y');
+clrscr;
+
+writeln('Terima kasih telah menggunakan program ini ',data1.nama,' !');
+writeln('Sampai jumpa kembali ~!');
+
+writeln;
+writeln;
+
+writeln('<Tekan ENTER untuk keluar>');
+readln;
+
+clrscr;
 end.
