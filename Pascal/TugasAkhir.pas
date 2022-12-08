@@ -54,9 +54,7 @@ var
     nilai1,nilai2,hsltambah,hslkali,hslkurang : integer;
    hslbagi : real;
    mx,n : integer;
-
-
-   j1 : char;
+   j1,ad : char;
 z : real;
 L : Array_1;
 data1: data;
@@ -75,7 +73,7 @@ clrscr;
         clrscr;
 
                 writeln('===========================================');
-                    writeln('Selamat datang ',data1.nama,' !');
+                    writeln('         Selamat datang ',data1.nama,' !');
                 writeln('===========================================');
 
                 writeln('Halo ',data1.nama,' dengan NIM ',data1.nim,' dari prodi ',data1.prodi);
@@ -86,7 +84,9 @@ clrscr;
     readln;
     clrscr;
 
+repeat
 
+    clrscr;
     writeln('Masukkan no program matematika yang anda butuhkan');
     writeln;
     writeln('1. Penentu jenis bilangan.');
@@ -99,7 +99,7 @@ clrscr;
 clrscr;
 
 
-repeat
+
     
 
 if prgm = 1 then
@@ -145,6 +145,9 @@ begin
    writeln('Pembagian : ',hslbagi:0:2);
    writeln('Penjumlahan : ',hsltambah);
    writeln('Pengurangan : ',hslkurang);
+   writeln;
+   writeln;
+   writeln('<Tekan ENTER untuk keluar');
    readln;
 end
 
@@ -154,6 +157,18 @@ else if prgm = 3 then
 
 begin
 clrscr;
+writeln('Anda memilih program pengurutan angka');
+writeln('Apakah anda ingin mengurutkan secara Ascending atau Descending? (a/d)');
+writeln;
+writeln;
+writeln('>>');readln(ad);
+
+
+
+
+if ad = 'd' then
+begin
+
 write('Masukkan banyak data (maks 10) : ');readln(n);
 writeln;
 
@@ -181,6 +196,48 @@ if  (n <= 10) and (n > 0) then
  
     writeln;
 
+        for i := 1 to n do
+            begin;
+                write(L[i]:3:0,'  ');
+            end;
+
+    end
+
+    else
+        begin
+            write('masukkan banyak data yang valid !');
+        end;
+end
+
+else if ad = 'a' then
+begin
+write('Masukkan banyak data (maks 10) : ');readln(n);
+writeln;
+
+if  (n <= 10) and (n > 0) then
+    begin
+
+    for i := 1 to n do
+        begin
+            write('Masukkan data ke-',i);
+            write(' : ');readln(L[i]);
+        end;
+
+    for i:= 1 to n do
+        begin
+            for j:= 1 to i-1 do
+                begin
+                    if (L[j]>L[j+1]) then
+                     begin
+                      z := L[j];
+                      L[j] :=  L[j+1];
+                      L[j+1] := z;
+                     end;
+                end;
+        end;
+ 
+    writeln;
+
     for i := 1 to n do
         begin;
          write(L[i]:3:0,'  ');
@@ -192,7 +249,7 @@ else
     begin
      write('masukkan banyak data yang valid !');
     end;
-
+end;
 readln;
 end
 
