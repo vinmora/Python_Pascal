@@ -1,7 +1,7 @@
 program soal1;
 uses crt;
 
-function ganjil(jenis :integer):string;
+function ganjil(jenis :longint):string;
     begin
         if jenis mod 2 = 1 then 
         ganjil := 'ganjil'
@@ -11,7 +11,7 @@ function ganjil(jenis :integer):string;
         write(ganjil);
     end; 
 
-procedure prima(jenis : integer);
+procedure prima(jenis : longint);
 var 
     i : integer;
     prime : boolean;
@@ -50,7 +50,7 @@ var
     m1,m2,m3: M;
     i,j,x1,x2,y1,y2 : integer;
     prgm : byte;
-    jenis: integer;
+    jenis: longint;
     nilai1,nilai2,hsltambah,hslkali,hslkurang : integer;
    hslbagi : real;
    mx,n : integer;
